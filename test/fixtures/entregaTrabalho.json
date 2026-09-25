@@ -1,0 +1,21 @@
+[
+    {
+        "testeTitulo": "Novo aluno deve entregar trabalho quando recem matriculado na disciplica",
+        "dadoAluno": {
+            "nome": "John Doe",
+            "email": "john.doe@example.com",
+            "senha": "123456",
+            "matricula": "2026000000"
+        },
+        "dadoDisciplina": {
+            "nome": "Automação de Testes na Camada de Serviço (API)",
+            "codigo": "API100",
+            "cargaHoraria": 60
+        },
+        "dadoTrabalho": {
+            "titulo": "Trabalho de Matemática",
+            "descricao": "Descrição do trabalho de Matemática"
+        },
+        "statusCodeEsperado": "201"
+    }
+]

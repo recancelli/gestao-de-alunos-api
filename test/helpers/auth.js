@@ -3,7 +3,7 @@ import 'dotenv/config';
 
 let tokenEmCache = null
 
-export async function comTokenDeAdmin() {
+export async function getTokenAdmin() {
     if (!tokenEmCache) {
         const loginResposta = await api()
             .post('/api/auth/login')
@@ -28,5 +28,5 @@ export async function getToken(emailUser, passUser) {
             senha: passUser
         });
 
-    return loginResposta.body.token;
+    return `Bearer ${loginResposta.body.token}`;
 }
