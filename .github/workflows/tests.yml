@@ -34,7 +34,15 @@ jobs:
       - name: Instalar dependências
         run: npm ci
 
-      - name: Executar testes
+      - name: Start API server
+        run: |
+          npm start > server.log 2>&1 &
+
+          npx wait-on http://127.0.0.1:3000
+
+      - name: Execute tests
         run: npm test
-        env:
-          MONGODB_URI: mongodb://127.0.0.1:27017/gestao-de-alunos-test
+
+      - name: Show server logs
+        if: always()
+        run: cat server.log
