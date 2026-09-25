@@ -1,0 +1,12 @@
+[
+    {
+        "testeTitulo": "deve retornar token para aluno recem criado",
+        "dadoAluno": {
+            "nome": "Ricardo Pereira",
+            "email": "ricardo.pereira@example.com",
+            "senha": "123456",
+            "matricula": "2026000002"
+        },
+        "statusCodeEsperado": "200"
+    }
+]
